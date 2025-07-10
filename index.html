@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile Box with Read More</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 50px 20px;
+    }
+
+    .profile-box {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 350px;
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #007bff;
+    }
+
+    .name {
+      margin-top: 15px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .btn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+
+    .about-me {
+      margin-top: 20px;
+      text-align: left;
+      display: none;
+      color: #444;
+    }
+
+    .about-me p {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="profile-box">
+    <img src="/Randomgirl.avif" alt="My Photo" class="profile-pic" />
+    <div class="name">Dignya Kopparapu</div>
+
+    <button class="btn" onclick="toggleAbout()">Read More</button>
+
+    <div class="about-me" id="aboutSection">
+      <p><strong>About Me:</strong></p>
+      <p>I am a curious learner and developer who enjoys building useful applications.</p>
+      <p>I have experience in front-end technologies, machine learning, and creative problem-solving.</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleAbout() {
+      const about = document.getElementById('aboutSection');
+      about.style.display = about.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
